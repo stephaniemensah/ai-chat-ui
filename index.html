@@ -4,61 +4,125 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ai-chat-ui</title>
-    <link rel="stylesheet" href="assets/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <div class="container">
-      <nav class="navbar">
-        <div class="logo">
+  <body class="font-['Segoe_UI']">
+    <div class="flex flex-col bg-[#f2f2f2] min-h-screen">
+      <nav
+        class="flex justify-between items-center px-4 py-6 md:px-[150px] md:py-[50px]"
+      >
+        <div class="flex items-center">
           <img
             src="assets/images/adobe_illustrator-logo-brandlogos.net_-512x512.png"
             alt=""
+            class="w-8 h-8 md:w-10 md:h-10 mr-2"
           />
-          <span>Hello AI</span>
+          <span class="font-bold text-[#9b9898] text-sm md:text-base"
+            >Onboardly</span
+          >
         </div>
 
         <img
           src="assets/images/close-up-shot-of-happy-dark-skinned-afro-american-woman-laughs-positively-being-in-good-mood-dressed-in-black-casual-clothes-isolated-on-grey-background-human-emotions-and-fe.jpg"
           alt=""
+          class="w-8 h-8 md:w-10 md:h-10 rounded-full"
         />
       </nav>
 
-      <div class="header">
-        <div class="greet">Hi Safatul Islam Aly</div>
-        <div class="title">What would like to know?</div>
-        <div class="subtitle">
+      <div
+        class="flex flex-col items-center justify-center gap-2.5 my-4 md:my-7 px-4 md:px-0"
+      >
+        <div class="text-[#797979] text-xl md:text-3xl font-bold">
+          Hi Safatul Islam Aly
+        </div>
+        <div class="text-black text-3xl md:text-5xl font-bold text-center">
+          What would like to know?
+        </div>
+        <div
+          class="text-[#6e6c6c] text-base md:text-xl font-medium text-center"
+        >
           Use one of the most common prompts below <br />
           or use your own to being
         </div>
       </div>
 
-      <div class="main">
-        <div class="cards">
-          <div class="card">
-            <h1><img src="./assets/images/user.png" alt="" class="icon" /></h1>
-            <p>Write a to do list for me for a persnal projects</p>
+      <div
+        class="flex flex-col justify-start md:justify-center items-center min-h-[60vh] md:h-screen px-4 md:px-[150px] relative mt-4 md:mt-0"
+      >
+        <div class="flex flex-col md:flex-row flex-wrap gap-4 md:gap-5">
+          <div
+            class="flex flex-col bg-white rounded-[20px] md:rounded-[30px] p-4 md:p-5 cursor-pointer transition-transform duration-300 w-full md:w-[250px] min-h-[160px] md:h-[200px] overflow-hidden hover:transform hover:scale-105"
+          >
+            <h1>
+              <img
+                src="./assets/images/user.png"
+                alt=""
+                class="w-6 h-6 md:w-[30px] md:h-[30px]"
+              />
+            </h1>
+            <p class="text-[#6e6c6c] text-lg md:text-[22px] font-medium m-0">
+              Write a to do list for me for a persnal projects
+            </p>
           </div>
 
-          <div class="card">
+          <div
+            class="flex flex-col bg-white rounded-[20px] md:rounded-[30px] p-4 md:p-5 cursor-pointer transition-transform duration-300 w-full md:w-[250px] min-h-[160px] md:h-[200px] overflow-hidden hover:transform hover:scale-105"
+          >
             <h1>
-              <img src="./assets/images/message.webp" alt="" class="icon" />
+              <img
+                src="./assets/images/message.webp"
+                alt=""
+                class="w-6 h-6 md:w-[30px] md:h-[30px]"
+              />
             </h1>
-            <p>Generate an email for a job offer</p>
+            <p class="text-[#6e6c6c] text-lg md:text-[22px] font-medium m-0">
+              Generate an email for a job offer
+            </p>
           </div>
-          <div class="card">
-            <h1><img src="./assets/images/ai.png" alt="" class="icon" /></h1>
-            <p>What is the difference between a cat and a dog</p>
+          <div
+            class="flex flex-col bg-white rounded-[20px] md:rounded-[30px] p-4 md:p-5 cursor-pointer transition-transform duration-300 w-full md:w-[250px] min-h-[160px] md:h-[200px] overflow-hidden hover:transform hover:scale-105"
+          >
+            <h1>
+              <img
+                src="./assets/images/ai.png"
+                alt=""
+                class="w-6 h-6 md:w-[30px] md:h-[30px]"
+              />
+            </h1>
+            <p class="text-[#6e6c6c] text-lg md:text-[22px] font-medium m-0">
+              What is the difference between a cat and a dog
+            </p>
           </div>
         </div>
 
-        <div class="input-field">
-          <div class="link">
-            <h1><img src="./assets/images/link.png" alt="" class="icon" /></h1>
-          </div>
-          <input type="text" placeholder="Ask whatever you want" />
-          <div class="send">
+        <div
+          class="flex flex-row items-center mt-8 md:mt-20 bg-white rounded-full p-[5px] fixed bottom-4 left-4 right-4 md:left-1/2 md:right-auto md:transform md:-translate-x-1/2 md:w-auto w-[calc(100%-2rem)]"
+        >
+          <div
+            class="flex items-center justify-center bg-[#c2c1c1] cursor-pointer w-8 h-8 md:w-10 md:h-10 rounded-full mr-2"
+          >
             <h1>
-              <img src="./assets/images/arrow-right.png" alt="" class="icon" />
+              <img
+                src="./assets/images/link.png"
+                alt=""
+                class="w-5 h-5 md:w-[30px] md:h-[30px]"
+              />
+            </h1>
+          </div>
+          <input
+            type="text"
+            placeholder="Ask whatever you want"
+            class="flex-1 py-2 px-2.5 text-sm md:text-base w-full md:w-[30vw] border-none outline-none"
+          />
+          <div
+            class="flex items-center justify-center cursor-pointer bg-[#c2c1c1] w-[70px] md:w-[90px] h-8 md:h-10 rounded-[30px]"
+          >
+            <h1>
+              <img
+                src="./assets/images/arrow-right.png"
+                alt=""
+                class="w-5 h-5 md:w-[30px] md:h-[30px]"
+              />
             </h1>
           </div>
         </div>

@@ -3,130 +3,226 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ai-chat-ui</title>
+    <title>Welcome to Onboardly</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
   </head>
-  <body class="font-['Segoe_UI']">
-    <div class="flex flex-col bg-[#f2f2f2] min-h-screen">
-      <nav
-        class="flex justify-between items-center px-4 py-6 md:px-[150px] md:py-[50px]"
-      >
-        <div class="flex items-center">
-          <img
-            src="assets/images/adobe_illustrator-logo-brandlogos.net_-512x512.png"
-            alt=""
-            class="w-8 h-8 md:w-10 md:h-10 mr-2"
-          />
-          <span class="font-bold text-[#9b9898] text-sm md:text-base"
-            >Onboardly</span
-          >
-        </div>
 
-        <img
-          src="assets/images/close-up-shot-of-happy-dark-skinned-afro-american-woman-laughs-positively-being-in-good-mood-dressed-in-black-casual-clothes-isolated-on-grey-background-human-emotions-and-fe.jpg"
-          alt=""
-          class="w-8 h-8 md:w-10 md:h-10 rounded-full"
-        />
+  <body class="font-['Poppins'] bg-gray-50">
+    <div class="flex flex-col min-h-screen">
+      <!-- Material Design App Bar -->
+      <nav class="material-app-bar bg-white shadow-sm border-b border-gray-200">
+        <div
+          class="flex justify-between items-center px-4 py-3 lg:px-6 lg:py-4 max-w-7xl mx-auto"
+        >
+          <div class="flex items-center">
+            <div class="material-logo-container flex items-center">
+              <img
+                src="assets/images/ai.png"
+                alt=""
+                class="w-8 h-8 lg:w-10 lg:h-10 mr-3"
+              />
+              <span class="font-medium text-gray-700 text-lg lg:text-xl"
+                >Onboardly</span
+              >
+            </div>
+          </div>
+
+          <div class="relative">
+            <div
+              id="profilePhotoContainer"
+              class="material-fab-small w-10 h-10 lg:w-12 lg:h-12 rounded-full cursor-pointer hover:shadow-md transition-all duration-200 overflow-hidden bg-gray-100 flex items-center justify-center border border-gray-200"
+              title="Click to upload profile photo"
+            >
+              <img
+                id="profilePhoto"
+                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' fill='%23cccccc'/%3E%3Ctext x='50%25' y='50%25' font-size='20' text-anchor='middle' dy='.3em' fill='%23666666'%3E👤%3C/text%3E%3C/svg%3E"
+                alt="Profile Photo"
+                class="w-full h-full object-cover rounded-full"
+              />
+            </div>
+            <input
+              type="file"
+              id="photoUpload"
+              accept="image/*"
+              class="hidden"
+            />
+          </div>
+        </div>
       </nav>
 
-      <div
-        class="flex flex-col items-center justify-center gap-2.5 my-4 md:my-7 px-4 md:px-0"
+      <!-- Material Design Main Content -->
+      <main
+        class="flex-1 flex flex-col items-center justify-start pt-8 lg:pt-12 px-4 lg:px-6"
       >
-        <div class="text-[#797979] text-xl md:text-3xl font-bold">
-          Hi Safatul Islam Aly
+        <!-- Material Design Typography Section -->
+        <div class="text-center mb-8 lg:mb-12 max-w-4xl mx-auto">
+          <div
+            class="text-gray-600 text-lg lg:text-xl font-normal mb-2"
+            id="userGreeting"
+          >
+            Hi Guest
+          </div>
+          <div class="text-gray-900 text-2xl lg:text-4xl font-medium">
+            What would you like to know about IPMC Ghana?
+          </div>
         </div>
-        <div class="text-black text-3xl md:text-5xl font-bold text-center">
-          What would like to know?
+
+        <!-- Material Design Cards Grid -->
+        <div class="w-full max-w-7xl mx-auto">
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3 gap-4 sm:gap-6 lg:gap-8"
+          >
+            <div
+              class="material-card prompt-card flex flex-col bg-white rounded-lg p-6 cursor-pointer transition-all duration-200 min-h-[180px] sm:min-h-[200px] lg:min-h-[220px] overflow-hidden hover:shadow-lg border border-gray-100"
+              data-prompt="Tell me about IPMC Ghana's training programs"
+            >
+              <div class="material-card-icon mb-4">
+                <span
+                  class="material-icons text-red-500 text-3xl sm:text-4xl lg:text-5xl"
+                  >school</span
+                >
+              </div>
+              <p
+                class="text-gray-700 text-base sm:text-lg lg:text-xl font-normal m-0 leading-relaxed"
+              >
+                Tell me about IPMC Ghana's training programs
+              </p>
+            </div>
+
+            <div
+              class="material-card prompt-card flex flex-col bg-white rounded-lg p-6 cursor-pointer transition-all duration-200 min-h-[180px] sm:min-h-[200px] lg:min-h-[220px] overflow-hidden hover:shadow-lg border border-gray-100"
+              data-prompt="What IT services does IPMC Ghana offer?"
+            >
+              <div class="material-card-icon mb-4">
+                <span
+                  class="material-icons text-red-500 text-3xl sm:text-4xl lg:text-5xl"
+                  >computer</span
+                >
+              </div>
+              <p
+                class="text-gray-700 text-base sm:text-lg lg:text-xl font-normal m-0 leading-relaxed"
+              >
+                What IT services does IPMC Ghana offer?
+              </p>
+            </div>
+
+            <div
+              class="material-card prompt-card flex flex-col bg-white rounded-lg p-6 cursor-pointer transition-all duration-200 min-h-[180px] sm:min-h-[200px] lg:min-h-[220px] overflow-hidden hover:shadow-lg border border-gray-100"
+              data-prompt="How can I contact IPMC Ghana?"
+            >
+              <div class="material-card-icon mb-4">
+                <span
+                  class="material-icons text-red-500 text-3xl sm:text-4xl lg:text-5xl"
+                  >contact_support</span
+                >
+              </div>
+              <p
+                class="text-gray-700 text-base sm:text-lg lg:text-xl font-normal m-0 leading-relaxed"
+              >
+                How can I contact IPMC Ghana?
+              </p>
+            </div>
+
+            <div
+              class="material-card prompt-card flex flex-col bg-white rounded-lg p-6 cursor-pointer transition-all duration-200 min-h-[180px] sm:min-h-[200px] lg:min-h-[220px] overflow-hidden hover:shadow-lg border border-gray-100"
+              data-prompt="Tell me about IPMC's AI programs"
+            >
+              <div class="material-card-icon mb-4">
+                <span
+                  class="material-icons text-red-500 text-3xl sm:text-4xl lg:text-5xl"
+                  >psychology</span
+                >
+              </div>
+              <p
+                class="text-gray-700 text-base sm:text-lg lg:text-xl font-normal m-0 leading-relaxed"
+              >
+                Tell me about IPMC's AI programs
+              </p>
+            </div>
+
+            <div
+              class="material-card prompt-card flex flex-col bg-white rounded-lg p-6 cursor-pointer transition-all duration-200 min-h-[180px] sm:min-h-[200px] lg:min-h-[220px] overflow-hidden hover:shadow-lg border border-gray-100"
+              data-prompt="Generate a 3D rendered image of a modern office building with IPMC logo"
+            >
+              <div class="material-card-icon mb-4">
+                <span
+                  class="material-icons text-red-500 text-3xl sm:text-4xl lg:text-5xl"
+                  >image</span
+                >
+              </div>
+              <p
+                class="text-gray-700 text-base sm:text-lg lg:text-xl font-normal m-0 leading-relaxed"
+              >
+                Generate a 3D rendered image of a modern office building with
+                IPMC logo
+              </p>
+            </div>
+
+            <div
+              class="material-card prompt-card flex flex-col bg-white rounded-lg p-6 cursor-pointer transition-all duration-200 min-h-[180px] sm:min-h-[200px] lg:min-h-[220px] overflow-hidden hover:shadow-lg border border-gray-100"
+              data-prompt="Create an illustration of a team collaborating on a digital project"
+            >
+              <div class="material-card-icon mb-4">
+                <span
+                  class="material-icons text-red-500 text-3xl sm:text-4xl lg:text-5xl"
+                  >group_work</span
+                >
+              </div>
+              <p
+                class="text-gray-700 text-base sm:text-lg lg:text-xl font-normal m-0 leading-relaxed"
+              >
+                Create an illustration of a team collaborating on a digital
+                project
+              </p>
+            </div>
+          </div>
         </div>
+
+        <!-- Material Design Floating Action Button with Input -->
         <div
-          class="text-[#6e6c6c] text-base md:text-xl font-medium text-center"
-        >
-          Use one of the most common prompts below <br />
-          or use your own to being
-        </div>
-      </div>
-
-      <div
-        class="flex flex-col justify-start md:justify-center items-center min-h-[60vh] md:h-screen px-4 md:px-[150px] relative mt-4 md:mt-0"
-      >
-        <div class="flex flex-col md:flex-row flex-wrap gap-4 md:gap-5">
-          <div
-            class="flex flex-col bg-white rounded-[20px] md:rounded-[30px] p-4 md:p-5 cursor-pointer transition-transform duration-300 w-full md:w-[250px] min-h-[160px] md:h-[200px] overflow-hidden hover:transform hover:scale-105"
-          >
-            <h1>
-              <img
-                src="./assets/images/user.png"
-                alt=""
-                class="w-6 h-6 md:w-[30px] md:h-[30px]"
-              />
-            </h1>
-            <p class="text-[#6e6c6c] text-lg md:text-[22px] font-medium m-0">
-              Write a to do list for me for a persnal projects
-            </p>
-          </div>
-
-          <div
-            class="flex flex-col bg-white rounded-[20px] md:rounded-[30px] p-4 md:p-5 cursor-pointer transition-transform duration-300 w-full md:w-[250px] min-h-[160px] md:h-[200px] overflow-hidden hover:transform hover:scale-105"
-          >
-            <h1>
-              <img
-                src="./assets/images/message.webp"
-                alt=""
-                class="w-6 h-6 md:w-[30px] md:h-[30px]"
-              />
-            </h1>
-            <p class="text-[#6e6c6c] text-lg md:text-[22px] font-medium m-0">
-              Generate an email for a job offer
-            </p>
-          </div>
-          <div
-            class="flex flex-col bg-white rounded-[20px] md:rounded-[30px] p-4 md:p-5 cursor-pointer transition-transform duration-300 w-full md:w-[250px] min-h-[160px] md:h-[200px] overflow-hidden hover:transform hover:scale-105"
-          >
-            <h1>
-              <img
-                src="./assets/images/ai.png"
-                alt=""
-                class="w-6 h-6 md:w-[30px] md:h-[30px]"
-              />
-            </h1>
-            <p class="text-[#6e6c6c] text-lg md:text-[22px] font-medium m-0">
-              What is the difference between a cat and a dog
-            </p>
-          </div>
-        </div>
-
-        <div
-          class="flex flex-row items-center mt-8 md:mt-20 bg-white rounded-full p-[5px] fixed bottom-4 left-4 right-4 md:left-1/2 md:right-auto md:transform md:-translate-x-1/2 md:w-auto w-[calc(100%-2rem)]"
+          class="material-fab-container fixed bottom-6 left-4 right-4 lg:left-1/2 lg:right-auto lg:transform lg:-translate-x-1/2 lg:w-auto w-[calc(100%-2rem)]"
         >
           <div
-            class="flex items-center justify-center bg-[#c2c1c1] cursor-pointer w-8 h-8 md:w-10 md:h-10 rounded-full mr-2"
+            class="material-input-container flex items-center bg-white rounded-full p-2 shadow-lg border border-gray-200"
           >
-            <h1>
-              <img
-                src="./assets/images/link.png"
-                alt=""
-                class="w-5 h-5 md:w-[30px] md:h-[30px]"
-              />
-            </h1>
-          </div>
-          <input
-            type="text"
-            placeholder="Ask whatever you want"
-            class="flex-1 py-2 px-2.5 text-sm md:text-base w-full md:w-[30vw] border-none outline-none"
-          />
-          <div
-            class="flex items-center justify-center cursor-pointer bg-[#c2c1c1] w-[70px] md:w-[90px] h-8 md:h-10 rounded-[30px]"
-          >
-            <h1>
-              <img
-                src="./assets/images/arrow-right.png"
-                alt=""
-                class="w-5 h-5 md:w-[30px] md:h-[30px]"
-              />
-            </h1>
+            <!-- Mode Toggle Button -->
+            <button
+              id="modeToggle"
+              class="material-icon-button flex items-center justify-center bg-gray-100 hover:bg-gray-200 cursor-pointer w-10 h-10 lg:w-12 lg:h-12 rounded-full mr-3 transition-all duration-200"
+              title="Toggle between Chat and Image Generation modes"
+            >
+              <span class="material-icons text-gray-600 text-xl" id="modeIcon"
+                >chat_bubble_outline</span
+              >
+            </button>
+
+            <input
+              id="chatInput"
+              type="text"
+              placeholder="Ask whatever you want"
+              class="flex-1 py-3 px-4 text-sm lg:text-base w-full lg:w-[30vw] border-none outline-none rounded-full bg-transparent focus:bg-gray-50 transition-all duration-200"
+            />
+            <button
+              id="sendButton"
+              class="material-fab flex items-center justify-center cursor-pointer bg-red-600 hover:bg-red-700 w-12 h-12 lg:w-14 lg:h-14 rounded-full transition-all duration-200 hover:shadow-lg"
+            >
+              <span class="material-icons text-white text-xl">send</span>
+            </button>
           </div>
         </div>
-      </div>
+      </main>
     </div>
+
+    <script src="assets/js/gemini-api.js"></script>
+    <script src="assets/js/script.js"></script>
   </body>
 </html>

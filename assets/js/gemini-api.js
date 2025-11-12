@@ -8,7 +8,7 @@ class GeminiAPI {
   async generateResponse(prompt) {
     try {
       const response = await fetch(
-        `${this.baseURL}/gemini-1.5-flash:generateContent?key=${this.apiKey}`,
+        `${this.baseURL}/gemini-2.0-flash-001:generateContent?key=${this.apiKey}`,
         {
           method: "POST",
           headers: {
@@ -81,7 +81,7 @@ class GeminiAPI {
   async generateImage(prompt) {
     try {
       const response = await fetch(
-        `${this.baseURL}/gemini-2.0-flash-preview-image-generation:generateContent?key=${this.apiKey}`,
+        `${this.baseURL}/gemini-2.0-flash-001:generateContent?key=${this.apiKey}`,
         {
           method: "POST",
           headers: {
@@ -152,7 +152,7 @@ class GeminiAPI {
       const base64Image = await this.fileToBase64(imageFile);
 
       const response = await fetch(
-        `${this.baseURL}/gemini-2.0-flash-preview-image-generation:generateContent?key=${this.apiKey}`,
+        `${this.baseURL}/gemini-2.0-flash-001:generateContent?key=${this.apiKey}`,
         {
           method: "POST",
           headers: {
@@ -239,7 +239,7 @@ class GeminiAPI {
   async generateStreamingResponse(prompt, onChunk) {
     try {
       const response = await fetch(
-        `${this.baseURL}/gemini-1.5-flash:generateContent?key=${this.apiKey}`,
+        `${this.baseURL}/gemini-2.0-flash-001:generateContent?key=${this.apiKey}`,
         {
           method: "POST",
           headers: {
@@ -432,7 +432,7 @@ class GeminiAPI {
 // Initialize Gemini API with your API key
 // You'll need to get a free API key from Google AI Studio
 // https://makersuite.google.com/app/apikey
-const GEMINI_API_KEY = "AIzaSyAUKqVhKd51nSHwZUxQrYTGqPsr31IdyCY"; // Replace with your actual API key
+const GEMINI_API_KEY = "AIzaSyAsWFUuZHTcx4XslNpdHvV4iphY93jwh4I"; // Replace with your actual API key
 
 // Create global instance
 const geminiAPI = new GeminiAPI(GEMINI_API_KEY);
